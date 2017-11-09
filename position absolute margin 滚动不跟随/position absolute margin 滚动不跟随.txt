@@ -1,0 +1,10 @@
+应该是layer的问题,没有生成一个合并的layer导致的
+
+解决:
+解决思路是生成一个合并的layer
+添加属性transform: translate3d(0,0,0);
+
+问题:
+1.和after的layer是不是一样的?为什么通过触控来下滑的时候会多个layer一并滚动捏?
+2.是否又通过消除伪类::after的layer来解决?
+3.为什么paint次数那么多?原来是滚动条的paint
